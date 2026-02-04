@@ -1,14 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Badge, Button, Card, SectionTitle, cn } from "@/components/ui";
 import WaitlistForm from "@/components/WaitlistForm";
-
-const nav = [
-  { href: "#problem", label: "문제" },
-  { href: "#how", label: "작동" },
-  { href: "#tech", label: "기술" },
-  { href: "#biz", label: "수익" },
-  { href: "#status", label: "현황" }
-] as const;
 
 function Check() {
   return (
@@ -27,38 +20,23 @@ export default function Page() {
       <header className="sticky top-0 z-30 border-b border-ink-100 bg-white/75 backdrop-blur">
         <div className="container flex h-16 items-center justify-between">
           <Link href="#" className="flex items-center gap-2 font-extrabold">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-ink-950 text-white shadow-soft">
-              A
-            </span>
             <span className="tracking-tight text-ink-950">아리아드네</span>
             <span className="hidden text-xs font-semibold text-ink-600 sm:inline">
               설치형 AI 디자인 비서
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-6 md:flex">
-            {nav.map((n) => (
-              <a
-                key={n.href}
-                href={n.href}
-                className="text-sm font-medium text-ink-700 hover:text-ink-950"
-              >
-                {n.label}
-              </a>
-            ))}
-          </nav>
-
           <div className="flex items-center gap-2">
+            <Button href="#cta" size="sm">
+              상담하기
+            </Button>
             <Button
               href="#cta"
               variant="secondary"
               size="sm"
               className="hidden sm:inline-flex"
             >
-              데모 요청
-            </Button>
-            <Button href="#cta" size="sm">
-              상담하기
+              미리 알림
             </Button>
           </div>
         </div>
@@ -72,20 +50,16 @@ export default function Page() {
             <div className="flex justify-center">
               <Badge>
                 <span className="inline-flex h-2 w-2 rounded-full bg-brand-500" />
-                공공기관 맞춤형 · 내부 설치형 · 규정 준수
+                우리 기관 맞춤형 · 보안 걱정 ZERO · 전문 디자이너 스타일 탑재
               </Badge>
             </div>
             <h1 className="mt-6 text-balance text-3xl font-extrabold tracking-tight text-ink-950 sm:text-5xl">
-              복잡한 규정은 AI가 지키고,
+              보고서 쓰기도 벅찬데,
               <br className="hidden sm:block" />
-              감각적인 스타일은 전문가가 더해주는
-              <span className="text-brand-700"> 우리 기관 맞춤형</span> 디자인
-              제작
+              디자인까지 관리해야 하나요?
             </h1>
             <p className="mt-5 text-pretty text-base leading-7 text-ink-700 sm:text-lg">
-              한글/보도자료를 넣으면 1분 안에 카드뉴스 초안을 만들고, 필요할 때는
-              10분 내 전문가가 마감 퀄리티로 다듬어드립니다. 데이터는 기관 밖으로
-              나가지 않습니다.
+              우리 기관 및 기업 스타일은 AI가, 퀄리티는 전문가가 책임집니다.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -105,18 +79,18 @@ export default function Page() {
               {[
                 {
                   k: "1분",
-                  v: "초안 생성",
-                  d: "규정 + 스타일 적용 자동화"
+                  v: "프롬프트 없는 자동 생성",
+                  d: "복잡한 명령어 공부는 그만. 텍스트만 넣으면 AI가 우리 기관 규정(가이드라인)을 완벽하게 적용합니다."
                 },
                 {
-                  k: "10분",
-                  v: "전문가 터치",
-                  d: "SOS 요청 시 빠른 마감"
+                  k: "휴먼스타일",
+                  v: "검증된 전문가 디자인",
+                  d: "기계적인 느낌은 NO. 11년 차 베테랑 디자이너의 고유한 스타일(Asset)을 학습하여 따뜻하고 전문적인 결과물을 만듭니다."
                 },
                 {
-                  k: "내부설치",
-                  v: "보안 준수",
-                  d: "외부 서버 전송 없이 운영"
+                  k: "내부 설치",
+                  v: "데이터 유출 0%",
+                  d: "외부 서버 전송 없는 설치형 솔루션으로, 엄격한 보안 심사도 문제없습니다."
                 }
               ].map((m) => (
                 <Card key={m.v} className="text-left">
@@ -139,28 +113,26 @@ export default function Page() {
       <section id="problem" className="container py-14 sm:py-20">
         <SectionTitle
           eyebrow="왜 필요한가"
-          title="기관의 규정·보안·인력 부족, 세 가지가 동시에 발목을 잡습니다"
-          desc="일반 AI는 기관별 로고·서체·금지어 규정을 모르고, 외부 전송은 보안 규정에 걸리고, 외주는 느리고 비쌉니다."
+          title="AI 도입, 시민들의 따가운 시선이 걱정되시나요?"
+          desc="기술은 필요하지만, '일자리 뺏는 거 아니냐', '세금 낭비 아니냐'는 시선 때문에 망설이는 담당자님을 위한 해답이 필요합니다."
         />
 
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
           <Card>
-            <div className="text-sm font-extrabold text-ink-950">
-              공공기관(고객)의 비명
-            </div>
+            <div className="text-sm font-extrabold text-ink-950">고객의 고민</div>
             <ul className="mt-4 space-y-3">
               {[
                 {
-                  t: "“남의 건 못 써요”",
-                  d: "로고 위치, 전용 서체, 금지어 등 우리 규정을 모르면 결과물이 무용지물."
+                  t: "보안: “기술은 필요한데, 사고 터질까 봐 겁나요”",
+                  d: "챗GPT 썼다가 공문서 유출되면 징계감이라, 알면서도 손이 잘 안 가시죠?"
                 },
                 {
-                  t: "“보안이 생명이에요”",
-                  d: "공문서/자료를 외부(해외) 서버로 보내는 건 규정 위반이라 사용 불가."
+                  t: "톤앤매너: “결국 사람이 다시 손봐야 해요”",
+                  d: "로고 컬러, 그래픽… AI는 우리 사정을 모릅니다. 톤앤매너가 맞지 않는 디자인은 소용이 없습니다."
                 },
                 {
-                  t: "“사람이 없어요”",
-                  d: "외주는 비싸고 수정에 3~4일. 급한 업무는 대응 불가."
+                  t: "합리성: “단순 업무에 비싼 외주는 부담스럽죠”",
+                  d: "엄청난 예술 작품을 원하는 게 아닙니다. 딱 ‘합리적인 비용’에 ‘준수한 퀄리티’—그 균형점이 필요하신 거 다 압니다."
                 }
               ].map((x) => (
                 <li key={x.t} className="flex gap-3">
@@ -177,18 +149,20 @@ export default function Page() {
           </Card>
 
           <Card>
-            <div className="text-sm font-extrabold text-ink-950">
-              전문 디자이너(파트너)의 비명
-            </div>
+            <div className="text-sm font-extrabold text-ink-950">사회적 명분</div>
             <ul className="mt-4 space-y-3">
               {[
                 {
-                  t: "“아이 키우며 일하고 싶어요”",
-                  d: "밤낮 수정 전화·마감 압박 구조는 육아와 병행이 어렵습니다."
+                  t: "상생: “일자리 뺏는 게 아니라, 돕는 기술입니다”",
+                  d: "단순 자동 생성이 아닙니다. 경력보유 디자이너의 ‘스타일 에셋’을 정당하게 구매하여 상생합니다."
                 },
                 {
-                  t: "“단순 알바는 싫어요”",
-                  d: "이름을 건 디자이너로서 정체성을 지키며 일하고 싶습니다."
+                  t: "휴먼터치: 담당자님을 지켜드리는 ‘휴먼터치’ 인증",
+                  d: "결과물에 ‘전문가 협업 인증’이 포함됩니다. “기계가 다 했다”는 민원 공격, 저희가 막아드립니다."
+                },
+                {
+                  t: "ESG: 혁신과 상생, 점수도 두 마리 토끼로",
+                  d: "기술 혁신(Smart) 도입 성과와 사회적 가치(Social) 창출을 동시에 설명할 수 있어, 보고서에 쓸 말이 풍성해집니다."
                 }
               ].map((x) => (
                 <li key={x.t} className="flex gap-3">
@@ -202,15 +176,17 @@ export default function Page() {
                 </li>
               ))}
             </ul>
-            <div className="mt-6 rounded-xl bg-ink-50 p-4">
-              <div className="text-sm font-semibold text-ink-950">
-                아리아드네의 해결 방식
-              </div>
-              <p className="mt-1 text-sm leading-6 text-ink-700">
-                규정 준수는 AI가 자동화하고, 스타일은 검증된 디자이너 에셋으로
-                선택하며, 마지막 퀄리티는 전문가가 빠르게 보증합니다.
-              </p>
-            </div>
+          </Card>
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <Card className="max-w-2xl bg-brand-50 text-center ring-1 ring-brand-100">
+            <p className="text-sm font-semibold leading-7 text-brand-900">
+              일자리를 위협하는 AI가 아닙니다.
+              <br />
+              시민과 디자이너, 그리고 담당자님 모두를 위한{" "}
+              <span className="font-extrabold">‘상생형 AI’</span>를 지향합니다.
+            </p>
           </Card>
         </div>
       </section>
@@ -219,67 +195,98 @@ export default function Page() {
         <div className="container">
           <SectionTitle
             eyebrow="어떻게 돌아가나"
-            title="규칙(기관) + 감각(디자이너) + 보증(전문가)로 결과를 만듭니다"
-            desc="기관별로 한 번만 세팅하면, 이후에는 문서만 넣고 스타일만 선택하면 됩니다."
+            title="프롬프트 없이 클릭만 하세요. 나머지는 아리아드네가 해결합니다."
+            desc="기관(기업)의 가이드라인 세팅은 최초 1회면 끝. 실무에서는 딱 3단계만 거치세요."
           />
 
-          <div className="mt-10 grid gap-4 lg:grid-cols-4">
-            {[
-              {
-                step: "Step 1",
-                title: "기관 세팅(비서 교육)",
-                points: [
-                  "A시청과 계약",
-                  "규정집(로고·색상·금지어) 1회 등록",
-                  "AI가 행정 규칙을 '참고서'처럼 기억"
-                ]
-              },
-              {
-                step: "Step 2",
-                title: "스타일 등록(재료 준비)",
-                points: [
-                  "‘안심 인증 디자이너’가 스타일 에셋 업로드",
-                  "마감 독촉 없이 편한 시간에 등록",
-                  "예: 복지관 느낌 / 공문서 느낌"
-                ]
-              },
-              {
-                step: "Step 3",
-                title: "비서에게 시키기(생성)",
-                points: [
-                  "담당자가 스타일 선택",
-                  "보도자료(한글 파일) 투입",
-                  "1분 만에 카드뉴스 초안 생성"
-                ]
-              },
-              {
-                step: "Step 4",
-                title: "전문가 터치(최종 점검)",
-                points: [
-                  "아쉬우면 ‘도와주세요’ 버튼",
-                  "전문가 PM이 10분 내 보정",
-                  "‘규정 위반 없음’ 안심 리포트와 납품"
-                ]
-              }
-            ].map((s) => (
-              <Card key={s.step} className="relative overflow-hidden">
-                <div className="text-xs font-semibold text-brand-700">
-                  {s.step}
+          <div className="mt-12 space-y-16 sm:space-y-20">
+            {/* Step 1 */}
+            <div className="grid items-center gap-8 lg:grid-cols-2">
+              <div className="order-1">
+                <Card className="overflow-hidden border-0 bg-white shadow-soft">
+                  <Image
+                    src="/mockups/mockup1.png"
+                    alt="디자이너 스타일 선택 화면"
+                    width={1200}
+                    height={800}
+                    className="h-auto w-full rounded-2xl object-cover shadow-md"
+                  />
+                </Card>
+              </div>
+              <div className="order-2">
+                <div className="text-xs font-semibold uppercase tracking-wide text-brand-700">
+                  Step 1. 휴먼 스타일 매칭 (Select)
                 </div>
-                <div className="mt-2 text-base font-extrabold tracking-tight text-ink-950">
-                  {s.title}
+                <h3 className="mt-3 text-xl font-extrabold tracking-tight text-ink-950 sm:text-2xl">
+                  오늘은 어떤 디자이너와 일해볼까요?
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-ink-700 sm:text-base">
+                  ‘안심 인증 디자이너’들의 다양한 스타일 에셋 중에서,
+                  <br className="hidden sm:block" />
+                  우리 프로젝트 성격에 딱 맞는 휴먼스타일을 선택하세요.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="grid items-center gap-8 lg:grid-cols-2">
+              <div className="order-2 lg:order-1">
+                <div className="text-xs font-semibold uppercase tracking-wide text-brand-700">
+                  Step 2. 프롬프트 없는 생성 (No Prompt)
                 </div>
-                <ul className="mt-4 space-y-2 text-sm leading-6 text-ink-700">
-                  {s.points.map((p) => (
-                    <li key={p} className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-ink-300" />
-                      <span>{p}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-brand-400/10 blur-2xl" />
-              </Card>
-            ))}
+                <h3 className="mt-3 text-xl font-extrabold tracking-tight text-ink-950 sm:text-2xl">
+                  보도자료만 올리면, 나머지는 AI가 알아서.
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-ink-700 sm:text-base">
+                  복잡한 명령어 공부는 필요 없습니다.
+                  <br className="hidden sm:block" />
+                  작성하신 보도자료나 기획안(HWP/Word)만 업로드하세요.
+                  <br className="hidden sm:block" />
+                  사전에 학습된 우리 기관 규정에 맞춰 AI가 즉시 디자인을 시작합니다.
+                </p>
+              </div>
+              <div className="order-1 lg:order-2">
+                <Card className="overflow-hidden border-0 bg-white shadow-soft">
+                  <Image
+                    src="/mockups/mockup2.png"
+                    alt="파일 업로드 및 생성 화면"
+                    width={1200}
+                    height={800}
+                    className="h-auto w-full rounded-2xl object-cover shadow-md"
+                  />
+                </Card>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="grid items-center gap-8 lg:grid-cols-2">
+              <div className="order-1">
+                <Card className="overflow-hidden border-0 bg-white shadow-soft">
+                  <Image
+                    src="/mockups/mockup3.png"
+                    alt="완성된 디자인과 전문가 터치 화면"
+                    width={1200}
+                    height={800}
+                    className="h-auto w-full rounded-2xl object-cover shadow-md"
+                  />
+                </Card>
+              </div>
+              <div className="order-2">
+                <div className="text-xs font-semibold uppercase tracking-wide text-brand-700">
+                  Step 3. AI 안심 인증서 발급 (Certification)
+                </div>
+                <h3 className="mt-3 text-xl font-extrabold tracking-tight text-ink-950 sm:text-2xl">
+                  단순 AI 결과물이 아닙니다. ‘사람’이 참여했습니다.
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-ink-700 sm:text-base">
+                  별도의 수정 요청 없이도, 검증된 디자이너의 에셋으로 생성되어 높은 퀄리티를 보장합니다.
+                  <br className="hidden sm:block" />
+                  결과물과 함께 ‘경력보유 디자이너 참여 인증’과 ‘가이드라인 준수 확인서’를 제공합니다.
+                  <br className="hidden sm:block" />
+                  “윤리적이고 안전한 AI를 사용했다”는 증빙 자료로 활용하여, 대외적인 시선과 감사 부담을 덜어드립니다.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -287,27 +294,27 @@ export default function Page() {
       <section id="tech" className="container py-14 sm:py-20">
         <SectionTitle
           eyebrow="핵심 기술"
-          title="남의 뇌를 빌리지 않고, 우리만의 뇌로 기관 내부에서 작동합니다"
-          desc="오픈소스 기반 모델 + 우리 데이터 재교육 + 내부 설치 + 규정집 교체형 구조."
+          title="외부 서버를 빌려 쓰지 않습니다. 기관 내부에 심어드리는 자체 AI 엔진입니다."
+          desc="데이터 외부 반출 걱정 없는 환경에서, 오직 우리 기관만의 규정을 학습합니다."
         />
 
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
           {[
             {
-              title: "오픈소스 모델 활용",
-              desc: "공개된 고성능 모델을 기반으로, 기관 요구에 맞춰 구성합니다."
+              title: "기관 전용 안심 엔진 (Private Engine)",
+              desc: "외부 AI(챗GPT 등)를 빌려 쓰지 않습니다. 오직 귀 기관만을 위한 단독 AI 엔진을 구축하여 보안과 성능을 모두 잡았습니다."
             },
             {
-              title: "우리 데이터로 재교육",
-              desc: "10년 치 공공기관 디자인 파일로 ‘행정 전문 AI’로 정교화합니다."
+              title: "공공·기업 디자인 최적화 (Optimized Design)",
+              desc: "일반적인 그림이 아닙니다. 10년 이상의 공공기관·기업 실무 데이터를 집중 학습시켜, 바로 결재 가능한 전문가 수준의 품질을 제공합니다."
             },
             {
-              title: "내부 설치(보안)",
-              desc: "인터넷을 타고 외부로 나가지 않도록 기관 내부 컴퓨터/서버에 설치합니다."
+              title: "내부 서버 설치 (Internal Install)",
+              desc: "인터넷망을 통해 외부로 데이터가 나가지 않습니다. 기관 내부 컴퓨터(서버)에 직접 설치하여 보안 사고를 원천 차단합니다."
             },
             {
-              title: "참고서(규정집) 교체 방식",
-              desc: "기관이 바뀌어도 모델을 새로 만들지 않고, 규정집 파일만 갈아 끼우면 즉시 적용됩니다."
+              title: "가이드라인 자동 적용 (Auto-Rule)",
+              desc: "규정이 바뀔 때마다 AI를 새로 개발할 필요가 없습니다. 변경된 규정집 파일만 등록하면, AI가 즉시 새로운 규칙을 적용합니다."
             }
           ].map((x) => (
             <Card key={x.title}>
@@ -394,60 +401,42 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="status" className="container py-14 sm:py-20">
-        <SectionTitle
-          eyebrow="현재 준비 상태"
-          title="기술·데이터·사람·시장 검증까지 준비되어 있습니다"
-        />
-
-        <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {[
-            { t: "기술 검증", d: "가상의 시청(데모) 규정 적용 테스트 완료" },
-            { t: "데이터", d: "1,000건+ 디자인 원본 파일 확보" },
-            { t: "사람", d: "2,000명 규모 디자이너 커뮤니티 보유" },
-            { t: "시장 확인", d: "랜딩페이지로 담당자 사전 신청 수요 확인 중" }
-          ].map((x) => (
-            <Card key={x.t}>
-              <div className="text-sm font-extrabold text-ink-950">{x.t}</div>
-              <p className="mt-2 text-sm leading-6 text-ink-700">{x.d}</p>
-            </Card>
-          ))}
-        </div>
-      </section>
-
       <section id="cta" className="relative overflow-hidden border-t border-ink-100">
         <div className="absolute inset-0 grid-fade opacity-70" />
         <div className="container relative py-14 sm:py-20">
           <div className="mx-auto max-w-3xl">
-            <Card className="p-6 sm:p-8">
-              <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <div className="text-xs font-semibold tracking-wide text-brand-700">
-                    사전예약 알림
-                  </div>
-                  <h3 className="mt-2 text-balance text-xl font-extrabold tracking-tight text-ink-950 sm:text-2xl">
-                    출시/베타 오픈 시 가장 먼저 알려드릴게요
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-ink-700">
-                    혜택/할인 없이 알림만 받습니다. (선착순 베타 좌석이 열릴 때도
-                    함께 안내)
-                  </p>
+            <Card className="p-6 sm:p-8 text-center">
+              <div>
+                <div className="text-xs font-semibold tracking-wide text-brand-700">
+                  베타 대기명단 모집
                 </div>
-                <div className="sm:min-w-[340px]">
-                  <WaitlistForm />
-                  <div className="mt-3">
-                    <Button href="#problem" variant="secondary" className="w-full">
-                      문제부터 다시 보기
-                    </Button>
-                  </div>
+                <h3 className="mt-2 text-balance text-xl font-extrabold tracking-tight text-ink-950 sm:text-2xl">
+                  복잡한 가이드라인에서 해방되는 가장 빠른 방법,
+                  <br />
+                  아리아드네 베타 대기명단에 합류하세요.
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-ink-700 sm:text-base">
+                  보안 걱정 없는 설치형 AI 비서를 가장 먼저 경험할 수 있습니다.
+                  <br />
+                  (아래 버튼을 누르면 간편 신청서 페이지로 이동합니다.)
+                </p>
+                <div className="mt-6 flex justify-center">
+                  <Button
+                    href="https://tally.so/r/your-tally-form-id"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-6"
+                  >
+                    베타 테스터 신청하기 (Tally)
+                  </Button>
                 </div>
               </div>
 
-              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              <div className="mt-8 grid gap-3 sm:grid-cols-3">
                 {[
                   "기관 내부 설치형(보안 준수)",
                   "규정 위반 없음 리포트",
-                  "필요 시 10분 전문가 터치"
+                  "Human-Touch 인증 (전문가 협업)"
                 ].map((x) => (
                   <div
                     key={x}
