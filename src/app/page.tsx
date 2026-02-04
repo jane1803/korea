@@ -408,17 +408,17 @@ export default function Page() {
             <Card className="p-6 sm:p-8 text-center">
               <div>
                 <div className="text-xs font-semibold tracking-wide text-brand-700">
-                  베타 대기명단 모집
+                  출시 알림 신청
                 </div>
                 <h3 className="mt-2 text-balance text-xl font-extrabold tracking-tight text-ink-950 sm:text-2xl">
                   복잡한 가이드라인에서 해방되는 가장 빠른 방법,
                   <br />
-                  아리아드네 베타 대기명단에 합류하세요.
+                  아리아드네 출시 알림을 받아보세요.
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-ink-700 sm:text-base">
-                  보안 걱정 없는 설치형 AI 비서를 가장 먼저 경험할 수 있습니다.
+                  보안 걱정 없는 설치형 AI 비서가 준비되면 가장 먼저 문을 두드리겠습니다.
                   <br />
-                  (아래 버튼을 누르면 간편 신청서 페이지로 이동합니다.)
+                  (아래 버튼을 누르면 알림 신청 페이지로 이동합니다.)
                 </p>
                 <div className="mt-6 flex justify-center">
                   <Button
@@ -427,7 +427,7 @@ export default function Page() {
                     rel="noreferrer"
                     className="px-6"
                   >
-                    베타 테스터 신청하기 (Tally)
+                    서비스 출시 알림 신청하기 (Tally)
                   </Button>
                 </div>
               </div>
