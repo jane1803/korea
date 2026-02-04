@@ -27,11 +27,18 @@ export default function Page() {
           </Link>
 
           <div className="flex items-center gap-2">
-            <Button href="#cta" size="sm">
+            <Button
+              href="https://tally.so/r/J9zx8Y"
+              target="_blank"
+              rel="noreferrer"
+              size="sm"
+            >
               상담하기
             </Button>
             <Button
-              href="#cta"
+              href="https://tally.so/r/J9zx8Y"
+              target="_blank"
+              rel="noreferrer"
               variant="secondary"
               size="sm"
               className="hidden sm:inline-flex"
@@ -63,8 +70,13 @@ export default function Page() {
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Button href="#cta" className="w-full sm:w-auto">
-                데모/도입 상담 요청
+              <Button
+                href="https://tally.so/r/J9zx8Y"
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto"
+              >
+                사전 알림 신청
               </Button>
               <Button
                 href="#how"
@@ -325,82 +337,6 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="biz" className="border-y border-ink-100 bg-ink-50/40 py-14 sm:py-20">
-        <div className="container">
-          <SectionTitle
-            eyebrow="수익 & 보상"
-            title="기관은 빠르고 안전하게, 디자이너는 지속 가능한 방식으로"
-            desc="구독형 설치비/월과금 + 전문가 터치 과금. 디자이너는 제작비 + 러닝 개런티."
-          />
-
-          <div className="mt-10 grid gap-4 lg:grid-cols-2">
-            <Card>
-              <div className="text-sm font-extrabold text-ink-950">
-                디자이너 보상(파트너)
-              </div>
-              <div className="mt-4 space-y-3">
-                <div className="rounded-xl bg-white p-4 ring-1 ring-ink-100">
-                  <div className="text-sm font-semibold text-ink-950">
-                    초기: 에셋 제작비
-                  </div>
-                  <p className="mt-1 text-sm leading-6 text-ink-700">
-                    스타일 에셋을 만들어 올릴 때마다 건별 제작비를 지급합니다.
-                  </p>
-                </div>
-                <div className="rounded-xl bg-white p-4 ring-1 ring-ink-100">
-                  <div className="text-sm font-semibold text-ink-950">
-                    후기: 러닝 개런티(인세)
-                  </div>
-                  <p className="mt-1 text-sm leading-6 text-ink-700">
-                    고객이 내 스타일을 많이 쓸수록 작가처럼 인세가 쌓입니다.
-                  </p>
-                </div>
-              </div>
-              <div className="mt-5 text-sm font-semibold text-brand-800">
-                효과: “자는 동안에도 들어오는 구조”
-              </div>
-            </Card>
-
-            <Card>
-              <div className="text-sm font-extrabold text-ink-950">
-                회사 수익(아리아드네)
-              </div>
-              <div className="mt-4 space-y-3">
-                {[
-                  {
-                    t: "기관 계약",
-                    d: "프로그램 설치비 + 월/연간 구독료"
-                  },
-                  {
-                    t: "전문가 터치",
-                    d: "사람이 직접 수정해주는 서비스 추가 이용료"
-                  }
-                ].map((x) => (
-                  <div
-                    key={x.t}
-                    className="rounded-xl bg-white p-4 ring-1 ring-ink-100"
-                  >
-                    <div className="text-sm font-semibold text-ink-950">
-                      {x.t}
-                    </div>
-                    <p className="mt-1 text-sm leading-6 text-ink-700">{x.d}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-5 rounded-xl bg-ink-950 p-4 text-white">
-                <div className="text-sm font-semibold">
-                  도입 담당자에게 중요한 포인트
-                </div>
-                <p className="mt-1 text-sm leading-6 text-white/85">
-                  “외부 반출 없는 내부 설치형”과 “규정 준수 리포트”로 감사/보안
-                  리스크를 줄입니다.
-                </p>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       <section id="cta" className="relative overflow-hidden border-t border-ink-100">
         <div className="absolute inset-0 grid-fade opacity-70" />
         <div className="container relative py-14 sm:py-20">
@@ -422,7 +358,7 @@ export default function Page() {
                 </p>
                 <div className="mt-6 flex justify-center">
                   <Button
-                    href="https://tally.so/r/your-tally-form-id"
+                    href="https://tally.so/r/J9zx8Y"
                     target="_blank"
                     rel="noreferrer"
                     className="px-6"
