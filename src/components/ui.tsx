@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ComponentProps } from "react";
+import type { ComponentProps, ReactNode } from "react";
 
 export function cn(...parts: Array<string | false | null | undefined>) {
   return parts.filter(Boolean).join(" ");
@@ -73,7 +73,7 @@ export function SectionTitle({
   desc
 }: {
   eyebrow: string;
-  title: string;
+  title: ReactNode;
   desc?: string;
 }) {
   return (
