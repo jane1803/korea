@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import Script from "next/script";
 export const metadata: Metadata = {
   title: "아리아드네 | 우리기관 맞춤형 설치형 AI 디자인 비서",
   description:
@@ -17,8 +17,21 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-E3ZH6XXQQ9"
+          strategy="afterInteractive"
+        />
+        <Script id="ga" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-E3ZH6XXQQ9');
+          `}
+        </Script>
+      </head>
       <body>{children}</body>
     </html>
   );
 }
-
