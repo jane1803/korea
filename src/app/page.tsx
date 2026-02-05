@@ -219,15 +219,15 @@ export default function Page() {
 
           <div className="mt-12 space-y-16 sm:space-y-20">
             {/* Step 1 */}
-            <div className="grid items-center gap-8 lg:grid-cols-2">
+            <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
               <div className="order-1">
-                <Card className="overflow-hidden border-0 bg-white shadow-soft">
+                <Card className="overflow-hidden border-0 bg-white p-0 shadow-[0_8px_30px_rgba(10,20,40,0.12)] ring-1 ring-ink-100">
                   <Image
                     src="/mockups/mockup1.png"
                     alt="디자이너 스타일 선택 화면"
                     width={1200}
                     height={800}
-                    className="h-auto w-full rounded-2xl object-cover shadow-md"
+                    className="h-auto w-full object-contain"
                   />
                 </Card>
               </div>
@@ -247,7 +247,7 @@ export default function Page() {
             </div>
 
             {/* Step 2 */}
-            <div className="grid items-center gap-8 lg:grid-cols-2">
+            <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
               <div className="order-2 lg:order-1">
                 <div className="text-xs font-semibold uppercase tracking-wide text-brand-700">
                   Step 2. 프롬프트 없는 생성 (No Prompt)
@@ -264,28 +264,28 @@ export default function Page() {
                 </p>
               </div>
               <div className="order-1 lg:order-2">
-                <Card className="overflow-hidden border-0 bg-white shadow-soft">
+                <Card className="overflow-hidden border-0 bg-white p-0 shadow-[0_8px_30px_rgba(10,20,40,0.12)] ring-1 ring-ink-100">
                   <Image
                     src="/mockups/mockup2.png"
                     alt="파일 업로드 및 생성 화면"
                     width={1200}
                     height={800}
-                    className="h-auto w-full rounded-2xl object-cover shadow-md"
+                    className="h-auto w-full object-contain"
                   />
                 </Card>
               </div>
             </div>
 
             {/* Step 3 */}
-            <div className="grid items-center gap-8 lg:grid-cols-2">
+            <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
               <div className="order-1">
-                <Card className="overflow-hidden border-0 bg-white shadow-soft">
+                <Card className="overflow-hidden border-0 bg-white p-0 shadow-[0_8px_30px_rgba(10,20,40,0.12)] ring-1 ring-ink-100">
                   <Image
                     src="/mockups/mockup3.png"
                     alt="완성된 디자인과 전문가 터치 화면"
                     width={1200}
                     height={800}
-                    className="h-auto w-full rounded-2xl object-cover shadow-md"
+                    className="h-auto w-full object-contain"
                   />
                 </Card>
               </div>
