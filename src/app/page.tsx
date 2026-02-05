@@ -207,7 +207,13 @@ export default function Page() {
         <div className="container">
           <SectionTitle
             eyebrow="어떻게 돌아가나"
-            title="프롬프트 없이 클릭만 하세요. 나머지는 아리아드네가 해결합니다."
+            title={
+              <>
+                프롬프트 없이 클릭만 하세요.
+                <br />
+                나머지는 아리아드네가 해결합니다.
+              </>
+            }
             desc="기관(기업)의 가이드라인 세팅은 최초 1회면 끝. 실무에서는 딱 3단계만 거치세요."
           />
 
@@ -306,7 +312,13 @@ export default function Page() {
       <section id="tech" className="container py-14 sm:py-20">
         <SectionTitle
           eyebrow="핵심 기술"
-          title="외부 서버를 빌려 쓰지 않습니다. 기관 내부에 심어드리는 자체 AI 엔진입니다."
+          title={
+            <>
+              외부 서버를 빌려 쓰지 않습니다.
+              <br />
+              기관 내부에 심어드리는 자체 AI 엔진입니다.
+            </>
+          }
           desc="데이터 외부 반출 걱정 없는 환경에서, 오직 우리 기관만의 규정을 학습합니다."
         />
 
