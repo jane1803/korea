@@ -255,46 +255,6 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="tech" className="container py-14 sm:py-20">
-        <SectionTitle
-          eyebrow="핵심 기술"
-          title={
-            <>
-              외부 서버를 빌려 쓰지 않습니다.
-              <br />
-              기관 내부에 심어드리는 자체 AI 엔진입니다.
-            </>
-          }
-          desc="데이터 외부 반출 걱정 없는 환경에서, 오직 우리 기관만의 규정을 학습합니다."
-        />
-
-        <div className="mt-10 grid gap-4 lg:grid-cols-2">
-          {[
-            {
-              title: "기관 전용 안심 엔진 (Private Engine)",
-              desc: "외부 AI(챗GPT 등)를 빌려 쓰지 않습니다. 오직 귀 기관만을 위한 단독 AI 엔진을 구축하여 보안과 성능을 모두 잡았습니다."
-            },
-            {
-              title: "공공·기업 디자인 최적화 (Optimized Design)",
-              desc: "일반적인 그림이 아닙니다. 10년 이상의 공공기관·기업 실무 데이터를 집중 학습시켜, 바로 결재 가능한 전문가 수준의 품질을 제공합니다."
-            },
-            {
-              title: "내부 서버 설치 (Internal Install)",
-              desc: "인터넷망을 통해 외부로 데이터가 나가지 않습니다. 기관 내부 컴퓨터(서버)에 직접 설치하여 보안 사고를 원천 차단합니다."
-            },
-            {
-              title: "가이드라인 자동 적용 (Auto-Rule)",
-              desc: "규정이 바뀔 때마다 AI를 새로 개발할 필요가 없습니다. 변경된 규정집 파일만 등록하면, AI가 즉시 새로운 규칙을 적용합니다."
-            }
-          ].map((x) => (
-            <Card key={x.title}>
-              <div className="text-sm font-extrabold text-ink-950">{x.title}</div>
-              <p className="mt-2 text-sm leading-6 text-ink-700">{x.desc}</p>
-            </Card>
-          ))}
-        </div>
-      </section>
-
       <section id="cta" className="relative overflow-hidden border-t border-ink-100">
         <div className="absolute inset-0 grid-fade opacity-70" />
         <div className="container relative py-14 sm:py-20">
