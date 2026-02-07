@@ -14,6 +14,70 @@ function Check() {
   );
 }
 
+const iconWrap = "flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-700";
+
+function IconEditLayers() {
+  return (
+    <span className={iconWrap} aria-hidden>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="2" />
+        <path d="M3 9h18" />
+        <path d="M3 15h18" />
+        <path d="M9 3v18" />
+      </svg>
+    </span>
+  );
+}
+function IconWorkspace() {
+  return (
+    <span className={iconWrap} aria-hidden>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+        <line x1="12" y1="11" x2="12" y2="17" />
+      </svg>
+    </span>
+  );
+}
+function IconHeartTouch() {
+  return (
+    <span className={iconWrap} aria-hidden>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      </svg>
+    </span>
+  );
+}
+function IconPrompt() {
+  return (
+    <span className={iconWrap} aria-hidden>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      </svg>
+    </span>
+  );
+}
+function IconTemplate() {
+  return (
+    <span className={iconWrap} aria-hidden>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="3" width="7" height="7" />
+        <rect x="14" y="3" width="7" height="7" />
+        <rect x="14" y="14" width="7" height="7" />
+        <rect x="3" y="14" width="7" height="7" />
+      </svg>
+    </span>
+  );
+}
+function IconSpeed() {
+  return (
+    <span className={iconWrap} aria-hidden>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+      </svg>
+    </span>
+  );
+}
+
 export default function Page() {
   return (
     <main className="min-h-screen">
@@ -87,9 +151,10 @@ export default function Page() {
             <p className="mt-2 text-sm leading-6 text-ink-700">“명령어 공부하느라 야근하시나요?”</p>
           </Card>
           <Card>
-            <p className="text-sm leading-6 text-ink-700">
+            <div className="text-sm font-extrabold text-ink-950">
               캔바, 미리캔버스를 써도
-              <br />
+            </div>
+            <p className="mt-2 text-sm leading-6 text-ink-700">
               결국 내가 다시 고쳐야 했던 경험
             </p>
           </Card>
@@ -102,9 +167,10 @@ export default function Page() {
             </p>
           </Card>
           <Card>
-            <p className="text-sm leading-6 text-ink-700">
-              빠르긴 한데
-              <br />
+            <div className="text-sm font-extrabold text-ink-950">
+              빠르긴 하지만...
+            </div>
+            <p className="mt-2 text-sm leading-6 text-ink-700">
               어딘가 사람 냄새 안 나는 디자인
             </p>
           </Card>
@@ -126,7 +192,7 @@ export default function Page() {
           />
           <div className="mt-12 space-y-10">
             <Card>
-              <div className="text-xs font-semibold uppercase tracking-wide text-brand-700">
+              <div className="text-lg font-extrabold uppercase tracking-wide text-brand-700">
                 STEP 1. 워크스페이스 설정 🏢
               </div>
               <p className="mt-2 text-sm leading-6 text-ink-700">
@@ -139,7 +205,7 @@ export default function Page() {
               </ul>
             </Card>
             <Card>
-              <div className="text-xs font-semibold uppercase tracking-wide text-brand-700">
+              <div className="text-lg font-extrabold uppercase tracking-wide text-brand-700">
                 STEP 2. 문서 업로드 & 디자인 선택 📄
               </div>
               <p className="mt-2 text-sm leading-6 text-ink-700">
@@ -149,7 +215,7 @@ export default function Page() {
               <p className="text-sm leading-6 text-ink-700">포스터, 배너, 카드뉴스 등 필요한 디자인을 선택합니다.</p>
             </Card>
             <Card>
-              <div className="text-xs font-semibold uppercase tracking-wide text-brand-700">
+              <div className="text-lg font-extrabold uppercase tracking-wide text-brand-700">
                 STEP 3. 스타일 필터 적용 ✨
               </div>
               <p className="mt-2 text-sm font-semibold text-ink-900">“원하는 분위기를 클릭하세요.”</p>
@@ -159,7 +225,7 @@ export default function Page() {
               </ul>
             </Card>
             <Card>
-              <div className="text-xs font-semibold uppercase tracking-wide text-brand-700">
+              <div className="text-lg font-extrabold uppercase tracking-wide text-brand-700">
                 STEP 4. 에디터에서 완성 🛠️
               </div>
               <p className="mt-2 text-sm leading-6 text-ink-700">즉시 수정 가능한 원본을 제공합니다.</p>
@@ -181,40 +247,49 @@ export default function Page() {
           desc="가장 강력한 3가지 차별화 기능"
         />
         <div className="mt-10 space-y-8">
-          <Card>
-            <div className="text-sm font-extrabold text-ink-950">
-              ① 그림이 아닌 ‘편집 가능한 AI 디자인’
-            </div>
-            <blockquote className="mt-3 border-l-2 border-brand-300 pl-4 text-sm italic text-ink-700">
+          <Card className="flex gap-4">
+            <IconEditLayers />
+            <div className="min-w-0 flex-1">
+              <div className="text-sm font-extrabold text-ink-950">
+                ① 그림이 아닌 ‘편집 가능한 AI 디자인’
+              </div>
+              <blockquote className="mt-3 border-l-2 border-brand-300 pl-4 text-sm italic text-ink-700">
               “PPT처럼 클릭해서 고치세요. 우리는 수정 가능한 원본을 드립니다.”
             </blockquote>
             <p className="mt-3 text-sm leading-6 text-ink-700">
               텍스트와 배경이 합쳐진 이미지가 아닙니다. 모든 요소가 분리된 레이어(Layer) 구조로 생성되어
               실무 활용도가 높습니다.
             </p>
-          </Card>
-          <Card>
-            <div className="text-sm font-extrabold text-ink-950">
-              ② 완벽하게 분리된 ‘멀티 워크스페이스’
             </div>
-            <blockquote className="mt-3 border-l-2 border-brand-300 pl-4 text-sm italic text-ink-700">
+          </Card>
+          <Card className="flex gap-4">
+            <IconWorkspace />
+            <div className="min-w-0 flex-1">
+              <div className="text-sm font-extrabold text-ink-950">
+                ② 완벽하게 분리된 ‘멀티 워크스페이스’
+              </div>
+              <blockquote className="mt-3 border-l-2 border-brand-300 pl-4 text-sm italic text-ink-700">
               “하나의 계정으로, 여러 브랜드를 안전하게 관리하세요.”
             </blockquote>
             <p className="mt-3 text-sm leading-6 text-ink-700">
-              기관 본청의 공식 스타일과 행사용 크리에이티브 스타일을 데이터 섞임 없이 독립적으로 운영합니다.
+              기관 본청의 공식 스타일과 행사용 크리에이티브 스타일을               데이터 섞임 없이 독립적으로 운영합니다.
             </p>
-          </Card>
-          <Card>
-            <div className="text-sm font-extrabold text-ink-950">
-              ③ 사람의 감각을 더한 디자인
             </div>
-            <blockquote className="mt-3 border-l-2 border-brand-300 pl-4 text-sm italic text-ink-700">
+          </Card>
+          <Card className="flex gap-4">
+            <IconHeartTouch />
+            <div className="min-w-0 flex-1">
+              <div className="text-sm font-extrabold text-ink-950">
+                ③ 사람의 감각을 더한 디자인
+              </div>
+              <blockquote className="mt-3 border-l-2 border-brand-300 pl-4 text-sm italic text-ink-700">
               “AI의 편리함에 전문가의 따뜻한 터치를 입혔습니다.”
             </blockquote>
             <p className="mt-3 text-sm leading-6 text-ink-700">
               경력보유 여성 디자이너들의 감각적인 스타일 필터를 제공합니다.
               사용 시마다 디자이너와 수익을 나누는 착한 기술입니다.
             </p>
+            </div>
           </Card>
         </div>
       </section>
@@ -254,22 +329,25 @@ export default function Page() {
       <section className="container py-14 sm:py-20">
         <SectionTitle eyebrow="" title="아리아드네가 지향하는 방식" />
         <div className="mt-10 grid gap-4 sm:grid-cols-3">
-          <Card className="text-center">
-            <p className="text-sm font-medium leading-6 text-ink-700">
+          <Card className="flex flex-col items-center text-center">
+            <IconPrompt />
+            <p className="mt-3 text-sm font-medium leading-6 text-ink-700">
               프롬프트를 잘 쓰는 사람만
               <br />
               빠르게 일하는 구조는 오래가지 않습니다.
             </p>
           </Card>
-          <Card className="text-center">
-            <p className="text-sm font-medium leading-6 text-ink-700">
+          <Card className="flex flex-col items-center text-center">
+            <IconTemplate />
+            <p className="mt-3 text-sm font-medium leading-6 text-ink-700">
               템플릿 중심의 디자인은
               <br />
               결국 다시 손이 갑니다.
             </p>
           </Card>
-          <Card className="text-center">
-            <p className="text-sm font-medium leading-6 text-ink-700">
+          <Card className="flex flex-col items-center text-center">
+            <IconSpeed />
+            <p className="mt-3 text-sm font-medium leading-6 text-ink-700">
               빠르기만 한 AI 디자인은
               <br />
               쉽게 잊혀집니다.
