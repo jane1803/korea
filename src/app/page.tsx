@@ -73,28 +73,46 @@ export default function Page() {
       <section id="problem" className="container py-14 sm:py-20">
         <SectionTitle
           eyebrow=""
-          title="쏟아지는 생성형 AI 디자인 서비스 앞에서 길을 잃으셨나요?"
+          title={
+            <>
+              쏟아지는 생성형 AI 디자인 서비스 앞에서
+              <br />
+              길을 잃으셨나요?
+            </>
+          }
         />
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <Card>
             <div className="text-sm font-extrabold text-ink-950">막막한 프롬프트 🤯</div>
-            <p className="mt-2 text-sm font-semibold text-ink-800">“명령어 공부하느라 야근하시나요?”</p>
-            <p className="mt-2 text-sm leading-6 text-ink-700">
-              캔바, 미리캔버스를 써도 결국 내가 다시 고쳐야 했던 경험
+            <p className="mt-2 text-sm leading-6 text-ink-700">“명령어 공부하느라 야근하시나요?”</p>
+          </Card>
+          <Card>
+            <p className="text-sm leading-6 text-ink-700">
+              캔바, 미리캔버스를 써도
+              <br />
+              결국 내가 다시 고쳐야 했던 경험
             </p>
           </Card>
           <Card>
             <div className="text-sm font-extrabold text-ink-950">수정 불가능한 결과물 🖼️</div>
-            <p className="mt-2 text-sm font-semibold text-ink-800">
-              “오타 하나 고치려는데 그림 전체가 바뀌어 버리는 ‘통이미지’에 지치셨나요?”
-            </p>
             <p className="mt-2 text-sm leading-6 text-ink-700">
-              빠르긴 한데 어딘가 사람 냄새 안 나는 디자인
+              “오타 하나 고치려는데 그림 전체가 바뀌어 버리는
+              <br />
+              ‘통이미지’에 지치셨나요?”
+            </p>
+          </Card>
+          <Card>
+            <p className="text-sm leading-6 text-ink-700">
+              빠르긴 한데
+              <br />
+              어딘가 사람 냄새 안 나는 디자인
             </p>
           </Card>
         </div>
         <p className="mt-10 text-center text-base font-semibold text-ink-900">
-          아리아드네는 이 모든 문제에서 출발했습니다.
+          아리아드네는
+          <br />
+          이 모든 문제에서 출발했습니다.
         </p>
       </section>
 
@@ -234,19 +252,35 @@ export default function Page() {
 
       {/* 아리아드네가 지향하는 방식 */}
       <section className="container py-14 sm:py-20">
-        <SectionTitle
-          eyebrow=""
-          title="아리아드네가 지향하는 방식"
-          desc="(철학적 이유)"
-        />
-        <div className="mx-auto mt-10 max-w-2xl space-y-4 text-center text-sm leading-7 text-ink-700">
-          <p>프롬프트를 잘 쓰는 사람만 빠르게 일하는 구조는 오래가지 않습니다.</p>
-          <p>템플릿 중심의 디자인은 결국 다시 손이 갑니다.</p>
-          <p>빠르기만 한 AI 디자인은 쉽게 잊혀집니다.</p>
-          <p className="pt-4 font-semibold text-ink-950">
-            아리아드네는 ‘이해하고, 안내하고, 고칠 수 있는 디자인’을 목표로 합니다.
-          </p>
+        <SectionTitle eyebrow="" title="아리아드네가 지향하는 방식" />
+        <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          <Card className="text-center">
+            <p className="text-sm font-medium leading-6 text-ink-700">
+              프롬프트를 잘 쓰는 사람만
+              <br />
+              빠르게 일하는 구조는 오래가지 않습니다.
+            </p>
+          </Card>
+          <Card className="text-center">
+            <p className="text-sm font-medium leading-6 text-ink-700">
+              템플릿 중심의 디자인은
+              <br />
+              결국 다시 손이 갑니다.
+            </p>
+          </Card>
+          <Card className="text-center">
+            <p className="text-sm font-medium leading-6 text-ink-700">
+              빠르기만 한 AI 디자인은
+              <br />
+              쉽게 잊혀집니다.
+            </p>
+          </Card>
         </div>
+        <p className="mx-auto mt-8 max-w-xl text-center text-base font-semibold text-ink-950">
+          아리아드네는
+          <br />
+          ‘이해하고, 안내하고, 고칠 수 있는 디자인’을 목표로 합니다.
+        </p>
       </section>
 
       {/* 스타일 마켓 */}
@@ -257,12 +291,18 @@ export default function Page() {
             title="사람의 감각을 더하는 디자인 스타일 마켓"
             desc="아리아드네의 디자인 스타일은 실제 디자이너의 작업 감각을 학습한 스타일 필터입니다."
           />
-          <ul className="mx-auto mt-6 max-w-lg space-y-2 text-sm leading-6 text-ink-700">
-            <li>· 따뜻한 분위기</li>
-            <li>· 신뢰감 있는 공공 디자인</li>
-            <li>· 절제된 기업 홍보 스타일</li>
-          </ul>
-          <p className="mt-6 text-center text-sm leading-6 text-ink-700">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
+            <span className="inline-flex min-h-[5rem] min-w-[5rem] items-center justify-center rounded-full border-2 border-brand-200 bg-brand-50/80 px-5 py-3 text-center text-sm font-semibold text-ink-800">
+              따뜻한 분위기
+            </span>
+            <span className="inline-flex min-h-[5rem] min-w-[5rem] items-center justify-center rounded-full border-2 border-brand-200 bg-brand-50/80 px-5 py-3 text-center text-sm font-semibold leading-snug text-ink-800">
+              신뢰감 있는 공공 디자인
+            </span>
+            <span className="inline-flex min-h-[5rem] min-w-[5rem] items-center justify-center rounded-full border-2 border-brand-200 bg-brand-50/80 px-5 py-3 text-center text-sm font-semibold leading-snug text-ink-800">
+              절제된 기업 홍보 스타일
+            </span>
+          </div>
+          <p className="mt-8 text-center text-sm leading-6 text-ink-700">
             원하는 분위기를 선택하면 AI는 그 감각을 반영해 디자인을 생성합니다.
           </p>
           <p className="mt-3 text-center text-sm leading-6 text-ink-700">
